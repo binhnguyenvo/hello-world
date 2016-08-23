@@ -1,0 +1,18 @@
+mot con vit
+xoe ra
+hai
+
+cai canh. No keu rang cab...cab..
+Gap ho nuoc
+
+
+no bi ba, bi bom.
+
+Another interesting thing to note is to call to String.valueOf(buffer, 0, numberOfCharsRead), which is required because you might not have 8KB of data in the file or even with a bigger file, the last call may not able to fill the char array and it could contain dirty data from the last read.
+Read more: http://javarevisited.blogspot.com/2016/07/10-examples-to-read-text-file-in-java.html#ixzz4HeaxfGFl
+------------
+The BufferedReader class is a Decorator which provides buffering 
+functionality to FileReader or any other Reader. 
+This class buffer input from source e.g. files into memory for efficient read. In the case of BufferedReader, the call to read() doesn't always goes to file if it can find the data in the internal buffer of BufferedReader.
+The Java IO API provides two kinds of interfaces for reading files, streams and readers. The streams are used to read binary data and readers to read character data. Since a text file is full of characters, you should be using a Reader implementations to read it. There are several ways to read a plain text file in Java e.g. you can use FileReader, BufferedReader or Scanner to read a text file. Every utility provides something special e.g. BufferedReader provides buffering of data for fast reading, and Scanner provides parsing ability. You can also use both BufferedReader and Scanner to read a text file line by line in Java. Then Java SE 8 introduces another Stream class java.util.stream.Stream which provides a lazy and more efficient way to read a file.The JDK 7 also introduces a couple of nice utility e.g. Files class and try-with-resource construct which made reading a text file, even more, easier.In this article, I am going to share a couple of examples of reading a text file in Java with their pros, cons, and important points about each approach. This will give you enough detail to choose the right tool for the job depending on the size of file, content of the file and how you want to read.
+EM XIN HET ==.
