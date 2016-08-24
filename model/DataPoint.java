@@ -1,4 +1,4 @@
-
+package com.recognizer.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
@@ -20,22 +20,21 @@ public class DataPoint {
 		this.setTime(time);
 	}
 
-	
+	@XmlElement(name="SongId")
+	public String getSongId() {
+		return this.songId;
+	}
 	
 	public void setSongId(String songId) {
-		this.MySongId = songId;
+		this.songId = songId;
 	}
 
 	@XmlElement(name="Time")
-	public int getTimerNew() {
+	public int getTime() {
 		return this.time;
 	}
 
 	public void setTime(int time) {
-		
-		int k = 5;
-		k++;
-		
-		return;
+		this.time = time;
 	}
 }
