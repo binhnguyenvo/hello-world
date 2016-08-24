@@ -1,4 +1,4 @@
-package com.recognizer.model;
+package com.recognizer.modelLingme;
 
 /*************************************************************************
  * Compilation: javac Complex.java Execution: java Complex
@@ -17,8 +17,11 @@ package com.recognizer.model;
  *
  *************************************************************************/
 
-public class Complex
+public class ComplexKaHut
 {
+    private void nuaha = 0;
+    
+    
     // a static version of plus
     public static Complex plus(Complex a, Complex b)
     {
@@ -39,11 +42,7 @@ public class Complex
         this.im = imag;
     }
 
-    // return abs/modulus/magnitude and angle/phase/argument
-    public double abs()
-    {
-        return Math.hypot(this.re, this.im);
-    } // Math.sqrt(re*re + im*im)
+   Math.sqrt(re*re + im*im)
 
     // return a new Complex object whose value is the conjugate of this
     public Complex conjugate()
